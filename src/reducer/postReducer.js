@@ -10,10 +10,8 @@ const postReducer = ( state = initialState, action) => {
             }
         case 'TAG':
             const tagData = state.array.filter(element => {
-                for(let i = 0; i < element.tags.length; i++) {
-                    if(element.tags[i] === action.payload) return true;
-                }
-                return false;
+                if(element.tags.includes(action.payload)) return true
+                else return false
             });
             return {
                 array: tagData

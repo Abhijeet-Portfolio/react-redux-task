@@ -8,26 +8,33 @@ const Post = React.lazy(() => import('./Post'));
 
 const UserPosts = () => {
 
+    const [tags, settags] = useState(['All']);
     const dispatch = useDispatch();
-
     const getData = useSelector(state => state.posts.array);
-    console.log(getData);
 
     useEffect(() => {
         dispatch(fetchPosts());
     }, []);
 
     const clickTag = value => {
-        console.log(value);
-        dispatch(tagName(value))
+        dispatch(tagName(value));
+        settags([...tags,(' > '+value)]);
+    }
+    
+    const clearTags = () => {
+        dispatch(fetchPosts());
+        settags(['All']);
     }
 
     return (
         <section className="user-posts">
             <div className="wrapper">
                 <div className='heading'>
-                    <h2>Posts</h2>
-                    <button onClick={() => dispatch(fetchPosts())}>All Posts</button>
+                    <div>
+                        <h2>Posts</h2>
+                        <span>{tags.map(tag => tag)}</span>
+                    </div>
+                    <button onClick={() => clearTags()}>Clear</button>
                 </div>
                 <ul className="posts">
                     {getData.length === 0 ? <Loader /> : getData.map((element, key) => {

@@ -45,8 +45,7 @@ const UsersList = () => {
                                         <img src={element.picture} alt={element.firstName} />
                                     </figure>
                                     <div>
-                                        <h3>ID: {element.id}</h3>
-                                        <h4>Name: {element.title}. {element.firstName} {element.lastName}</h4>
+                                        <h3>Name : {element.title}. {element.firstName} {element.lastName}</h3>
                                     </div>
                                 </li>
                             )

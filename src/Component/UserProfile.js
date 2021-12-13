@@ -18,9 +18,9 @@ const UserProfile = props => {
     }, []);   
 
     return (
-        <div className="user-modal">
-            <span onClick={() => props.modal(false)}>X</span>
-            <div>
+        <div className="user-modal" onClick={() => props.modal(false)}>
+            <span>X</span>
+            <div onClick={event => event.stopPropagation()}>
                 <h3>Profile</h3>
                 <div className="profile">
                     {userData === undefined ? <Loader /> : userDetail(userData)}
@@ -43,7 +43,7 @@ const userDetail = data => {
                     </li>
                     <li><span>Name :</span> {data.title}. {data.firstName} {data.lastName}</li>
                     <li><span>Gender :</span> {data.gender}</li>
-                    <li><span>DOB :</span> {data.dateOfBirth}</li>
+                    <li><span>DOB :</span> {data.dateOfBirth.slice(0,10)}</li>
                     <li><span>Email ID :</span> {data.email}</li>
                     <li><span>Contact No. :</span> {data.phone}</li>
                     <li>
