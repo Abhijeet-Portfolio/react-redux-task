@@ -37,7 +37,7 @@ const UsersList = () => {
                     </select>
                 </div>
                 <ul className='users-lists'>
-                    {getData.length === 0 ? <Loader /> : (getData.map((element, key) => {
+                    {getData.length === 0 ? <div className='loader-div'><Loader /></div> : (getData.map((element, key) => {
                         if (limit === 'all' || key < Number(limit)) {
                             return (
                                 <li key={key} onClick={() => displayModal(element.id)}>

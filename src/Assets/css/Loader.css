@@ -1,5 +1,10 @@
+.loader-div { 
+  width: 100%;
+  margin: 150px auto;
+}
+
 .lds-spinner {
-    margin: 120px auto 50px;
+    margin: 0 auto;
     color: official;
     display: block;
     position: relative;

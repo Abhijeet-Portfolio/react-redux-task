@@ -23,7 +23,7 @@ const UserProfile = props => {
             <div onClick={event => event.stopPropagation()}>
                 <h3>Profile</h3>
                 <div className="profile">
-                    {userData === undefined ? <Loader /> : userDetail(userData)}
+                    {userData === undefined ? <div className="loader-div"><Loader /></div> : userDetail(userData)}
                 </div>                
             </div>
         </div>

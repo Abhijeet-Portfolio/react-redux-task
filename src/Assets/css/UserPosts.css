@@ -31,8 +31,12 @@
     flex-wrap: wrap;
 }
 
-.user-posts .posts > li { 
-    width: 48%;
+.user-posts .posts .lazyload-wrapper {
+    flex-basis: 48%;
+}
+
+.user-posts .posts li { 
+
     min-height: 250px;
     border: 1px solid #111111;
     margin: 10px 0;
@@ -53,7 +57,7 @@
 .user-posts .posts .detail {
     box-sizing: border-box;
     width: 55%;
-    min-height: 90%;
+    min-height: 230px;
     padding-right: 2%;
     display: flex;
     justify-content: space-between;

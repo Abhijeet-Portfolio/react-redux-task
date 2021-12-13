@@ -1,10 +1,11 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPosts, tagName } from '../actions';
+import LazyLoad from 'react-lazyload';
 import Loader from './Loader';
+import Post from './Post';
 import '../Assets/css/UserPosts.css';
-const Post = React.lazy(() => import('./Post'));
 
 const UserPosts = () => {
 
@@ -37,11 +38,11 @@ const UserPosts = () => {
                     <button onClick={() => clearTags()}>Clear</button>
                 </div>
                 <ul className="posts">
-                    {getData.length === 0 ? <Loader /> : getData.map((element, key) => {
+                    {getData.length === 0 ? <div className='loader-div'><Loader /></div> : getData.map((element, key) => {
                         return (
-                            <Suspense fallback={<div>Loading...</div>}>
+                            <LazyLoad key={key} placeholder={<Loader />}>
                                 <Post element={element} id={key} clicktag={value => clickTag(value)} />
-                            </Suspense>                                
+                            </LazyLoad>                                
                         )
                     })}
                 </ul>
