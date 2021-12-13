@@ -1,0 +1,68 @@
+/* UserPosts styling Starts here */
+
+.user-posts .heading {
+    margin: 20px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-posts .heading h2 { 
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.user-posts .posts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.user-posts .posts > li { 
+    width: 48%;
+    min-height: 250px;
+    border: 1px solid #111111;
+    margin: 10px 0;
+    display: flex;
+    background-color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    overflow: none;
+}
+
+.user-posts .posts figure { width: 40%;}
+
+.user-posts img {
+    min-height: 250px;
+    max-height: 250px;
+}
+
+.user-posts .posts .detail {
+    box-sizing: border-box;
+    width: 55%;
+    min-height: 90%;
+    padding-right: 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.user-posts .posts .tags {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-posts .posts .tags button {
+    padding: 5px 4%;
+    border: 0;
+    background-color: #d3f5ff;
+    text-transform: capitalize;
+}
+
+.user-posts .posts .tags button:hover { background-color: #a9ddff;}
+.user-posts .posts .post-owner { text-align: end;}
+.user-posts .posts .post-owner h5 { color: #666666;}
+.user-posts .posts .post-owner span { color: #888888;}
+
+/* UserPosts styling Ends here */

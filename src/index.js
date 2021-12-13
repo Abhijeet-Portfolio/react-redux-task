@@ -3,18 +3,29 @@ import ReactDOM from 'react-dom';
 import './Assets/css/index.css';
 import App from './Component/App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import dataReducer from './reducer';
+import allReducers from './reducer';
 import reduxThunk from 'redux-thunk';
+import UsersList from './Component/UsersList';
+import Home from './Component/Home';
+import UserPosts from './Component/UserPosts';
 
-const store = createStore(dataReducer,applyMiddleware(reduxThunk));
+const store = createStore(allReducers, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <Router>
+      <Provider store={store}>
+        <App />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/userslist' element={<UsersList />} />
+          <Route path='/posts' element={<UserPosts />} />
+        </Routes>
+      </Provider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

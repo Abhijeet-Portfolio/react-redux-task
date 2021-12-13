@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import "../Assets/css/userModal.css"
-import Loader from "./loader";
+import "../Assets/css/UserProfile.css"
+import Loader from "./Loader";
 
 const UserProfile = props => {
 
@@ -19,7 +19,7 @@ const UserProfile = props => {
 
     return (
         <div className="user-modal">
-            <span onClick={() => props.modal(false)}>Close</span>
+            <span onClick={() => props.modal(false)}>X</span>
             <div>
                 <h3>Profile</h3>
                 <div className="profile">

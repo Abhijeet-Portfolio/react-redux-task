@@ -3,84 +3,28 @@
 =================================*/
 
 header { 
-  padding: 10px 0;
-  background-color: #0d083a;
-  color: #f5f5f5;
-  font-size: 22px;
+    padding: 10px 0;
+    background-color: #0d083a;
+    color: #f5f5f5;
 }
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+header h1 { font-size: 22px; }
+header nav { width: 20%;}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav .link { color: #dddddd; }
+header nav .link:hover { color: #f5f5f5;}
 
 /*=================================
   Header styling ends here
-=================================*/  
-
-/*=================================
-  main styling starts here
-=================================*/
-
-.users .sort {
-  margin: 20px 0 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.users h2 {
-  font-size: 20px;
-  font-weight: 500;
-  text-decoration: underline;
-}
-
-.users select {
-  width: 5%;
-  padding-left: 0.2%;
-  font-size: 16px;
-  outline: none;
-}
-
-.users ul{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.users .users-lists li {
-  box-sizing: border-box;
-  width: 31%;
-  border: 1px solid #dddddd;
-  margin: 15px 0;
-  display: flex;
-  background-color: #ffffff;
-  box-shadow: 0 0 10px 2px #bbbbbb;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-.users .users-lists li:hover { box-shadow: 0 0 5px 1px #bbbbbb;}
-
-.users .users-lists li figure { width: 25%;}
-
-.users .users-lists li div { width: 70%;}
-
-/*=================================
-  main styling ends here
-=================================*/
-
-/*=================================
-  footer styling starts here
 =================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-}  

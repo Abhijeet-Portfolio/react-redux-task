@@ -1,20 +1,10 @@
-const initialState = {
-    array: []
-}
+import { combineReducers } from "redux";
+import userReducer from './userReducer';
+import postReducer from "./postReducer";
 
-const dataReducer = ( state = initialState, action) => {
-    switch(action.type) {
-        case 'SET_USERS':
-            return {
-                array: action.payload
-            }
-        case '10':
-            return {
-                array: state.array.filter((element,key) => key < 10)
-            }
-        default:
-            return state;
-    }
-}
+const allReducers = combineReducers({
+    users: userReducer,
+    posts: postReducer
+})
 
-export default dataReducer;
+export default allReducers;

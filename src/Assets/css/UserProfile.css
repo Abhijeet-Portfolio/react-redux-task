@@ -19,7 +19,7 @@
 
 .user-modal > div {
     width: 50%;
-    margin: 150px auto 0;
+    margin: 130px auto 0;
     background-color: #f5f5f5;
 }
 
@@ -32,8 +32,6 @@
 }
 
 .user-modal .profile {
-    min-height: 341px;
-    max-height: 341px;
     display: flex;
     justify-content: space-between;
     align-items: center;
