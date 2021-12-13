@@ -19,9 +19,9 @@ const UserPosts = () => {
 
     const clickTag = value => {
         dispatch(tagName(value));
-        settags([...tags,(' > '+value)]);
+        settags([...tags, (' > ' + value)]);
     }
-    
+
     const clearTags = () => {
         dispatch(fetchPosts());
         settags(['All']);
@@ -42,7 +42,7 @@ const UserPosts = () => {
                         return (
                             <LazyLoad key={key} placeholder={<Loader />}>
                                 <Post element={element} id={key} clicktag={value => clickTag(value)} />
-                            </LazyLoad>                                
+                            </LazyLoad>
                         )
                     })}
                 </ul>
