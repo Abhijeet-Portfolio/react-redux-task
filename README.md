@@ -41,3 +41,15 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Description
 
+`redux-thunk` as a middleware
+
+`React-LazyLoad` used in UserPosts.js
+
+It's a small application which contains 3 Pages as followings :-
+
+1. `Home` :- Just a Welcome heading.
+
+2. `Users` :- It contains list of user name with profile picture and after clicking each user a modal will be open contains user clicked user details like Personal detail and Address. In list of user on right top there is limit like how much users should display by default it's All.
+
+3. `Posts` :- It contain list of Posts that users uploaded with Post Image and it's detail and by clicking tags present in each post the tag sort will applied and that sort name will be display beside the post heading and on top-right the clear button is there that will clear the sort and display all the posts and lazyload is applied on each Post.
+
